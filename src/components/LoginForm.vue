@@ -3,8 +3,8 @@
     <v-card-title>Login Form</v-card-title>
     <v-card-text>
       <v-form>
-        <v-text-field label="Username" v-model="username"></v-text-field>
-        <v-text-field label="Password" v-model="password" type="password"></v-text-field>
+        <v-text-field label="Username" v-model="username" :rules="usernameRules"></v-text-field>
+        <v-text-field label="Password" v-model="password" type="password" :rules="passwordRules"></v-text-field>
       </v-form>
     </v-card-text>
     <v-card-actions>
@@ -19,6 +19,14 @@ export default {
     return {
       username: "",
       password: "",
+      usernameRules: [
+        (u) => !!u || "Username is required",
+        (u) => u.length >= 5 || "Min length is 5",
+      ],
+      passwordRules: [
+        (p) => !!p || "Password is required",
+        (p) => p.length >= 8 || "Min length is 8",
+      ],
     };
   },
   methods: {
