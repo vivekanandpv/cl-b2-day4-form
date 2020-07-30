@@ -4,7 +4,7 @@
     <v-card-text>
       <v-form>
         <v-text-field label="Username" v-model="username"></v-text-field>
-        <v-text-field label="Password" v-model="password"></v-text-field>
+        <v-text-field label="Password" v-model="password" type="password"></v-text-field>
       </v-form>
     </v-card-text>
     <v-card-actions>
