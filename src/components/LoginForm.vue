@@ -3,8 +3,17 @@
     <v-card-title>Login Form</v-card-title>
     <v-card-text>
       <v-form v-model="valid">
-        <v-text-field label="Username" v-model="username" :rules="usernameRules"></v-text-field>
-        <v-text-field label="Password" v-model="password" type="password" :rules="passwordRules"></v-text-field>
+        <v-text-field
+          label="Username"
+          v-model="username"
+          :rules="usernameRules"
+        ></v-text-field>
+        <v-text-field
+          label="Password"
+          v-model="password"
+          type="password"
+          :rules="passwordRules"
+        ></v-text-field>
       </v-form>
     </v-card-text>
     <v-card-actions>
